@@ -1,4 +1,5 @@
 [rallycli]
 rally.username: 
 rally.password: 
-rally.url: https://rally1.rallydev.com/
+rally.url: rally1.rallydev.com
+rally.workspace:
