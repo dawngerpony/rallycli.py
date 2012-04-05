@@ -1,3 +1,4 @@
 rallycli.cfg
 *.pyc
-
+rallycli.log
+*.old
