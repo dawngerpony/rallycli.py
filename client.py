@@ -12,7 +12,7 @@ class RallyClient:
 	def __init__(self, config):
 		self.rally = Rally(config.rallyUrl, config.username, config.password, workspace="Betfair", project="Betfair")
 		self.rally.enableLogging('rallycli.log')
-		debug = config.debug
+		self.debug = config.debug
 
 	def retrieveItems(self, itemIds):
 		''' Use pyral to retrieve items from Rally. '''
@@ -21,7 +21,8 @@ class RallyClient:
 			query_criteria = 'formattedID = "%s"' % itemId
 			prefix = itemId[0:2]
 			response = self.rally.get(self.PrefixActionMap[prefix], fetch=True, query=query_criteria)
-			# print response.content
+			if self.debug:
+				print response.content
 			if response.errors:
 			    sys.stdout.write("\n".join(response.errors))
 			    print "ERROR"

@@ -8,7 +8,12 @@ def parseArgs():
 	parser.add_argument('workItems', nargs='+')
 	# parser.add_argument('--format', dest='format', default="text", choices="ct", help='print output in Confluence (c) or plaintext (t) format')
 	parser.add_argument('--format', choices=['csv', 'tsv', 'confluence', 'conftable'], help="control the format of the output")
-	parser.add_argument('--debug', choices=['true', 'false'], help="enable/disable debug output")
+	parser.add_argument('--debug', action='store_true', help="enable debug output")
 
 	args = parser.parse_args()
+
+	if args.debug:
+		print "DEBUG MODE"
+		print args
+
 	return args

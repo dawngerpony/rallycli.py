@@ -23,3 +23,6 @@ class RallyCliConfig:
 		self.password = config.get('rallycli', 'rally.password')
 		self.rallyUrl = config.get('rallycli', 'rally.url')
 		self.debug = args.debug
+
+		if self.debug:
+			print self.__dict__
