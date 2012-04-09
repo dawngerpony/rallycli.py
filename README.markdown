@@ -12,13 +12,11 @@ Installation
 ------------
 1. Download & install python 2.7
 1. (Optional) Install virtualenv so that you don't affect your existing python installation when you install the below dependencies.
-1. ```pip install pyral simplejson ConfigParser argparse request==0.9```
+1. ```pip install pyral simplejson ConfigParser argparse requests==0.9```
 
 Backlog
 -------
-1. CSV format
-1. Confluence table format
-1. TSV format
 1. "Show full info" parameter
 1. Test case support
 1. Support to create new work items using the CLI interface.
+1. Debug mode
